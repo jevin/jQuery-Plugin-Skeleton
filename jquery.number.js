@@ -37,7 +37,7 @@
       // Flip number back
       number = number.split("").reverse().join("");
       
-      return number;
+      return Number(number);
     }
   });
 })(jQuery);
