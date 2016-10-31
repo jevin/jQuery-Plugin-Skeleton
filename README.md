@@ -1,39 +1,34 @@
-#jQuery Plugin Skeleton
-##What?
-Simple, it's just a skeleton of a jQuery plugin that you can download, clone, fork, whatever. I'm putting it on Github mainly for myself. It also includes an MIT license at the top of the skeleton.
+# jQuery number
 
-##How?
-Only thing you really have to do is edit the MIT license on the first line:
+This plugin allows you to retrieve the numeric value of form fields or HTML elements.
 
-    Copyright (c) <Year> <First & Last Name>, <Your Web Site>
+## Installation
 
-And then name your plugin by replacing "`pluginname`" here:
+Download and include the jquery-number.js file
+```javascript
+<script src="/path/to/jquery.number.js"></script>
+```
 
-    pluginname: function(options) {
+## Usage
 
-Lastly, you basically just start writing you plugin right under this line:
+Retrieve value of a field or HTML element
+```javascript
+var number = $("#number-field").number();
+```
 
-    $this = $(this);
+Populate value of a field or HTML element
+```javascript
+$("#number-field").number(24.75);
+```
 
-Make sure to use `$this` to reference the element selected from the plugin. Example, `$this` in this case:
+## Contributing
 
-    $('#myelement').pluginname();
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
 
-Would equal `#myelement`, or for multiple items selected, the current item the plugin is on while looping through.
+## License
 
-##Note!
-This plugin allows you to keep on chaining, so, for example:
-
-    $('#myelement').pluginname().css({border:'1px solid blue'});
-
-Would run `pluginname` name on `#myelement` then add a blue border to it after.
-
-##Whats next?
-
-A skeleton that includes ready-to-go functions and callbacks for AJAX based plugins.
-
-##Found a bug? 
-
-Submit a bug report above or here: 
-
-<https://github.com/OscarGodson/jQuery-Plugin-Skeleton/issues>
+This project is licensed under [MIT license](http://opensource.org/licenses/mit-license.php)
