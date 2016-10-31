@@ -16,10 +16,15 @@ Retrieve value of a field or HTML element
 var number = $("#number-field").number();
 ```
 
-Populate value of a field or HTML element
+Populate value of a field or HTML element *(not yet implemented)*
 ```javascript
 $("#number-field").number(24.75);
 ```
+## TODO
+
+Additional help is always appreciated! Feel free to submit PRs for the following:
+- Code "populate value" part
+- Add tests
 
 ## Contributing
 
