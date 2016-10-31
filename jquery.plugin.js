@@ -21,23 +21,23 @@
 	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 ;(function($){
-    $.fn.extend({
-        number: function(options) {
-            this.defaultOptions = {};
+  $.fn.extend({
+    number: function(options) {
+      this.defaultOptions = {};
 
-            var settings = $.extend({}, this.defaultOptions, options);
-            var number = $(this).val() || $(this).text();
-            
-            // Flip number
-            number = number.split("").reverse().join("");
-            // Replace last comma with dot
-            number = number.replace(/\,/, ".");
-            // Remove all other commas
-            number = number.replace(/\,/g, "");
-            // Flip number back
-            number = number.split("").reverse().join("");
-            
-            return number;
-        }
-    });
+      var settings = $.extend({}, this.defaultOptions, options);
+      var number = $(this).val() || $(this).text();
+      
+      // Flip number
+      number = number.split("").reverse().join("");
+      // Replace last comma with dot
+      number = number.replace(/\,/, ".");
+      // Remove all other commas
+      number = number.replace(/\,/g, "");
+      // Flip number back
+      number = number.split("").reverse().join("");
+      
+      return number;
+    }
+  });
 })(jQuery);
