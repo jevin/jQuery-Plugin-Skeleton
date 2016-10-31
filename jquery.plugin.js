@@ -22,14 +22,22 @@
 */
 ;(function($){
     $.fn.extend({
-        pluginname: function(options) {
+        number: function(options) {
             this.defaultOptions = {};
 
             var settings = $.extend({}, this.defaultOptions, options);
-
-            return this.each(function() {
-                var $this = $(this);
-            });
+            var number = $(this).val() || $(this).text();
+            
+            // Flip number
+            number = number.split("").reverse().join("");
+            // Replace last comma with dot
+            number = number.replace(/\,/, ".");
+            // Remove all other commas
+            number = number.replace(/\,/g, "");
+            // Flip number back
+            number = number.split("").reverse().join("");
+            
+            return number;
         }
     });
 })(jQuery);
